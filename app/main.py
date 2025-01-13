@@ -23,7 +23,7 @@ app = FastAPI()
 origins = [
     "http://localhost",  # Permitir requisições de localhost (por exemplo, durante o desenvolvimento)
     "http://localhost:3000",  # Permitir requisições de um front-end em localhost na porta 3000 (ex: React)
-    "https://meu-site.com",  # Permitir requisições do domínio específico
+    "https://ghezinz.github.io/vivaleveFRONT/",  # Permitir requisições do domínio específico
     "http://127.0.0.1:5501",
     # Adicione outros domínios que você deseja permitir
 ]
