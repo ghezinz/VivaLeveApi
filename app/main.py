@@ -21,11 +21,11 @@ app = FastAPI()
 
 # Configuração do CORS
 origins = [
-    "http://localhost",  # Permitir requisições de localhost (por exemplo, durante o desenvolvimento)
-    "http://localhost:3000",  # Permitir requisições de um front-end em localhost na porta 3000 (ex: React)
-    "https://ghezinz.github.io/vivaleveFRONT/",  # Permitir requisições do domínio específico
+    "http://localhost",
+    "http://localhost:3000",
+    "https://ghezinz.github.io",  # Sem o /vivaleveFRONT/ se for apenas esse domínio
+    "https://ghezinz.github.io/vivaleveFRONT/",  # Com o caminho correto se necessário
     "http://127.0.0.1:5501",
-    # Adicione outros domínios que você deseja permitir
 ]
 
 app.add_middleware(
@@ -33,7 +33,7 @@ app.add_middleware(
     allow_origins=origins,  # Define os domínios permitidos
     allow_methods=["*"],  # Certifique-se de permitir todos os métodos
     allow_credentials=True,
-    allow_headers=["Content-Type", "*"]  # Permita todos os cabeçalhos
+    allow_headers=["Content-Type", "*"],  # Permita todos os cabeçalhos
 )
 
 # Registrando as rotas na aplicação
