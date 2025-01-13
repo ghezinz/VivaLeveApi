@@ -31,8 +31,8 @@ origins = [
 app.add_middleware(
     CORSMiddleware,
     allow_origins=origins,  # Define os domínios permitidos
-    allow_methods=["GET", "POST", "PUT", "DELETE"],  # Métodos permitidos
-    allow_headers=["Authorization", "Content-Type"]
+    allow_methods=["*"],  # Certifique-se de permitir todos os métodos
+    allow_headers=["*"],  # Permita todos os cabeçalhos
 )
 
 # Registrando as rotas na aplicação
