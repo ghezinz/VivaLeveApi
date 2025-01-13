@@ -33,7 +33,7 @@ app.add_middleware(
     allow_origins=origins,  # Define os domínios permitidos
     allow_methods=["*"],  # Certifique-se de permitir todos os métodos
     allow_credentials=True,
-    allow_headers=["*"],  # Permita todos os cabeçalhos
+    allow_headers=["Content-Type", "*"]  # Permita todos os cabeçalhos
 )
 
 # Registrando as rotas na aplicação
