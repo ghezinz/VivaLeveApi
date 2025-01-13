@@ -2,7 +2,7 @@ FROM python:3.10-slim
 
 # Copie os arquivos necessários
 WORKDIR /app
-COPY requirements.txt /app/
+COPY ./app/requirements.txt /app/
 
 # Instale as dependências
 RUN pip install --no-cache-dir -r requirements.txt
