@@ -20,7 +20,6 @@ class ProdutosBase(SQLModel):
     nome: str
     descricao: str
     preco: float
-    url: str
 
 class DietasBase(SQLModel):
     nome: str
@@ -97,7 +96,6 @@ class ProdutoRequest(BaseModel):
     nome: str
     preco: float
     descricao: str
-    url: str
 
 class DietaRequest(BaseModel):
     nome: str
